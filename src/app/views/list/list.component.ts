@@ -26,8 +26,9 @@ export class ListComponent implements OnInit {
   */
 
   get pkmSprite() {
-
-    const number = ('000' + this.selectedPkm.number).slice(-3);
+    if (this.selectedPkm !== null) {
+      const number = ('000' + this.selectedPkm.number).slice(-3);
+    }
 
     return `//serebii.net/sunmoon/pokemon/${number}.png`
   }
